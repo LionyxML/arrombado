@@ -10,5 +10,5 @@ Requer:
 - Mente aberta ao humor apresentado
 
 ## Demo
-![arrombado](img/demo.gif)
+![arrombado](demo/demo.gif)
 
