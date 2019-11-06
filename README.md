@@ -7,5 +7,8 @@ Jogo bem simples feito em python.
 Requer:
 - Python >= 3.7
 - Pygame >= 1.9.6
-- Cabeça aberta ao humor apresentado
+- Mente aberta ao humor apresentado
+
+## Demo
+![arrombado](img/scoreboard.gif)
 
