@@ -14,7 +14,7 @@ pygame.init()
 ################################################################## Tela
 tela_largura=800
 tela_altura=600
-tela=pygame.display.set_mode((tela_largura,tela_altura))
+tela=pygame.display.set_mode((tela_largura,tela_altura), flags=0, depth=0, display=0)
 pygame.display.set_caption("Arrombado!")
 
 
@@ -36,6 +36,9 @@ global deltax
 global velocidade
 global pausa
 
+textogrande=pygame.font.SysFont(None,115)
+textomedio=pygame.font.SysFont(None, 40)
+textopequeno=pygame.font.SysFont(None,16)
 
 ############################################################### Sprites
 arrombado_pic=pygame.image.load('arrombado.png')
@@ -82,10 +85,7 @@ def mensagem(texto,tamanho=False,posx=False,posy=False,coloracao=preto,tempo=2):
     if coloracao:
         cor=coloracao
     
-    textogrande=pygame.font.Font('freesansbold.ttf',115)
     tamanho_selecionado=textogrande
-    textomedio=pygame.font.Font('freesansbold.ttf', 40)
-    textopequeno=pygame.font.Font('freesansbold.ttf',16)
 
     if tamanho==1: tamanho_selecionado=textogrande
     if tamanho==2: tamanho_selecionado=textomedio
@@ -160,6 +160,8 @@ def intro():
     pombax=50
     pombay=50
     pombavelo=20
+
+
 
     tela.fill(preto)
     mensagem('Em um mundo cheio de vacilos...',2, coloracao=branco)
@@ -276,6 +278,9 @@ def loop_principal():
 
 
 ################################################# Processamento Inicial
+
+
+
 intro()
 loop_principal()
 pygame.quit()
